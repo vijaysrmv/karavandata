@@ -1,0 +1,21 @@
+- route:
+    id: route-c16c
+    nodePrefixId: route-3f0
+    from:
+      id: from-75a5
+      description: FirstProjectTest
+      uri: timer
+      parameters:
+        timerName: timer1
+      steps:
+        - setBody:
+            id: setBody-03d4
+            expression:
+              constant:
+                id: constant-890c
+                expression: Hi Vijay
+        - to:
+            id: to-3a77
+            uri: kamelet:log-sink
+            parameters:
+              level: INFO

@@ -1,8 +1,9 @@
 services:
   firstproject:
-    image: firstproject
-    restart: always
-    ports:
-      - "8081:8080"
+    container_name: firstproject
+    image: localhost:5555/karavan/firstproject:latest
     networks:
-      - karavan
+    - karavan
+    ports:
+    - 8081:8080
+    restart: always
